@@ -43,7 +43,7 @@ main proc
         "<html>\n"
         "<head>\n"
         "<title>GKS 2365 4to</title>\n"
-        "<link href='https://github.com/nidud/caudex/raw/main/css/style.css' rel='stylesheet' type='text/css'>\n"
+        "<link href='https://cdn.rawgit.com/nidud/caudex/master/css/style.css' rel='stylesheet' type='text/css'>\n"
         "<style>\n"
         " body  { font-family: 'Caudex', serif; font-size: 48px; }\n"
         " table { font-size: 38px; }\n"
