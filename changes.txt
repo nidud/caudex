@@ -1,0 +1,41 @@
+ChangeLog for Caudex font -- https://github.com/nidud/caudex
+
+2023 Des 28 (nidud) Version 1.08
+- moved glyph U+F232 to U+AB57 and U+AB59
+
+2016 Jun 06 (g_w_reynolds) Version 1.07
+- changed glyph hyphen-minus (U+002D) equal to hyphen (U+2010)
+
+2016 Jun 05 (g_w_reynolds) Version 1.06
+- changed PANOSE weight to Bold for Caudex-Bold and Caudex-BoldItalic
+- changed PANOSE letterform to Oblique/Weighted for Caudex-Italic and Caudex-BoldItalic
+- changed Styles (Subfamily) TTF name for Caudex-BoldItalic to BoldItalic
+- removed kern on the quoteright/space pair
+
+2013 Oct 18 (nidud) Version 1.05
+- added 42 more glyphs (Regular)
+- made composite glyphs to reduce size
+
+2012 Mar 31 (nidud) Version 1.04
+- fixed glyph "questiondown"
+
+2011 Jun 03 (nidud) Version 1.03
+- fixed metrics in Regular and Italic
+
+2011 Jun 02 (nidud) Version 1.02
+- added 525 more glyphs
+
+2011 May 12 (nidud) Version 1.01
+- synchronized glyphs in all fore types
+- synchronized metrics for all four types
+
+2011 Apr 29 (Dave Crossland) Updated for Google Web Fonts
+- Family naming changed to norms
+- fsType to 0
+- GASP table to a single value of 15
+- PREP table added
+- Vertical metrics corrected
+
+2011 Apr 07 (nidud) Version 1.00
+- renamed family name from Codex to Caudex
+
