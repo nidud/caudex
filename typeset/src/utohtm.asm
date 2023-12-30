@@ -35,15 +35,13 @@ main proc
     mov htm,rax
 
     ;
-    ;
-    ; "<title>GKS 2365 4to</title>\n"
     ; "<link href='http://fonts.googleapis.com/css?family=Caudex' rel='stylesheet' type='text/css'>\n"
     ;
     fprintf(htm,
         "<html>\n"
         "<head>\n"
         "<title>GKS 2365 4to</title>\n"
-        "<link href='https://cdn.rawgit.com/nidud/caudex/master/css/style.css' rel='stylesheet' type='text/css'>\n"
+        "<link href='https://cdn.jsdelivr.net/gh/nidud/caudex/css/style.css' rel='stylesheet' type='text/css'>\n"
         "<style>\n"
         " body  { font-family: 'Caudex', serif; font-size: 48px; }\n"
         " table { font-size: 38px; }\n"
@@ -86,7 +84,7 @@ main proc
                 fprintf(htm,
                     "<table border=0 cellspacing=0 cellpadding=5>\n"
                     "<tr valign=top>\n"
-                    "<td align=right><a href=\"https://github.com/nidud/caudex/raw/main/typeset/img/page_%02d.jpg\">%d</a></td>\n"
+                    "<td align=right><a href=\"https://cdn.jsdelivr.net/gh/nidud/caudex/typeset/img/page_%02d.jpg\">%d</a></td>\n"
                     "<td align=left>&#x2003;\n"
                     "<br><br><br><br>&#xF735;<br>\n"
                     "<br><br><br><br>&#xF731;&#xF730;<br>\n"
