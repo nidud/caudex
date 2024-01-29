@@ -1,0 +1,11 @@
+# FIXUP--
+#
+# fixup(glyph)
+#
+Select($1)
+Simplify()
+RoundToInt()
+AddExtrema(1)
+RoundToInt()
+AddExtrema()
+RoundToInt()

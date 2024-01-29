@@ -1,0 +1,24 @@
+# CAUDEXB.PE--
+#
+create()
+if ( $argc == 2 )
+    version = $1
+else
+    version = "2.0"
+endif
+name = ToString("../caudexb-" + version + ".sfd")
+
+Print("Building " + name)
+Open("caudexb.sfd", 1)
+Reencode("unicode")
+Validate()
+ulink(0xFF0000)
+ulink(0x00FF00)
+clean()
+fixup(0u039E)
+fixup(0u203B)
+Reencode("compacted")
+Save(name)
+Close()
+
+Quit()

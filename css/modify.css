@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Caudex";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/nidud/caudex/css/modify.woff2') format('woff2');
+}
+
+.caudex {
+  font-family: "Caudex", serif;
+  font-weight: 400;
+  font-style: normal;
+}

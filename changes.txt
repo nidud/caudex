@@ -1,5 +1,11 @@
 ChangeLog for Caudex font -- https://github.com/nidud/caudex
 
+2024 Jan 25 (nidud) Version 2.0
+- changed filename convention
+- changed Runic style
+- added Cyrillic
+- added script build
+
 2023 Des 28 (nidud) Version 1.08
 - moved glyph U+F232 to U+AB57 and U+AB59
 

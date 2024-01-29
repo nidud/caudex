@@ -10,5 +10,5 @@ The [Google Fonts](https://fonts.google.com/specimen/Caudex) css link:
 
 It is also possible (but not recommended) to link the whole font from this site:
 ```
-<link href='https://cdn.jsdelivr.net/gh/nidud/caudex/css/style.css' rel='stylesheet' type='text/css'>
+<link href='https://cdn.jsdelivr.net/gh/nidud/caudex/css/caudex.css' rel='stylesheet' type='text/css'>
 ```
