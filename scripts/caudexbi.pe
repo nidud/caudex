@@ -1,0 +1,93 @@
+#!/usr/bin/env fontforge
+
+if ( $argc == 2 )
+    version = $1
+else
+    version = "2.0"
+endif
+Open("../fonts/caudexb.ttf", 1)
+
+SetMacStyle(0x03)
+SetOS2Value("StyleMap", 0x21)
+SetItalicAngle(-13)
+SetFontNames("Caudex-BoldItalic", "", "Caudex BoldItalic", "BoldItalic", "", version)
+SetTTFName(0x409, 3, "FontForge : Caudex Bold Italic : 12-5-2011")
+SetTTFName(0x409, 2, "BoldItalic")
+
+unl_glyphs = [ \
+    0u0398, 0u03D9, 0u0480, 0u049C, \
+    0u049D, 0u04B8, 0u04B9, 0u04BC, \
+    0u04BD, 0u04BE, 0u04BF, 0u04CB, \
+    0u04CC, 0u211F, 0u2123, 0u2195, \
+    0u21A8, 0uA73A, 0uA73B, 0uA74B, \
+    0uA786 ]
+
+i = 0
+while ( i < SizeOf(unl_glyphs) )
+
+    Select(unl_glyphs[i])
+    SetCharColor(4)
+    ++i;
+endloop
+ulink(4)
+
+SelectAll()
+Skew(13,0,0)
+SelectGlyphsSplines()
+RoundToInt()
+AddExtrema()
+RoundToInt()
+Validate(1)
+count = CharCnt()
+i = 0
+while ( i < count )
+
+    Select(i)
+    state = GlyphInfo("ValidationState")
+    if ( state & 0x1 )
+        if ( state & 0x8 )
+            CorrectDirection()
+            RoundToInt()
+        endif
+        if ( state & 0x4 )
+            RemoveOverlap()
+            RoundToInt()
+        endif
+        if ( state & 0x20 )
+            AddExtrema(1)
+            RoundToInt()
+        endif
+    endif
+    ++i;
+endloop
+
+Open("../fonts/src/caudexbi.woff2", 1)
+Select(0u0398)
+SelectMore(0uA76E)
+SelectMore(0uEA43)
+Copy()
+SelectNone()
+Open($firstfont)
+Select(0u0398)
+SelectMore(0uA76E)
+SelectMore(0uEA43)
+Paste()
+SelectNone()
+
+Generate("../fonts/caudexbi.woff2")
+
+SetTTFName(1030, 2, "FedKursiv")
+SetTTFName(1031, 2, "FettKursiv")
+SetTTFName(1044, 2, "HalvfetKursiv")
+SetTTFName(1053, 2, "FetKursiv")
+SetTTFName(1040, 2, "NeroCursivo")
+SetTTFName(1034, 2, "NegritaCursiva")
+SetTTFName(1036, 2, "GrasItalique")
+SetTTFName(1032, 2, "﻿έντονηΛειψίας")
+SetTTFName(1049, 2, "﻿ОбычныйКурсив")
+
+Generate("../fonts/caudexbi.ttf")
+Close()
+Open($firstfont)
+Close()
+Quit()
