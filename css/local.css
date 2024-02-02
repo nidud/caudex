@@ -2,25 +2,25 @@
   font-family: "Caudex";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/caudex.woff2') format('woff2');
+  src: url('../fonts/Caudex-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: "Caudex";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/caudexb.woff2') format('woff2');
+  src: url('../fonts/Caudex-Bold.woff2') format('woff2');
 }
 @font-face {
   font-family: "Caudex";
   font-style: italic;
   font-weight: 400;
-  src: url('../fonts/caudexi.woff2') format('woff2');
+  src: url('../fonts/Caudex-Italic.woff2') format('woff2');
 }
 @font-face {
   font-family: "Caudex";
   font-style: italic;
   font-weight: 700;
-  src: url('../fonts/caudexbi.woff2') format('woff2');
+  src: url('../fonts/Caudex-BoldItalic.woff2') format('woff2');
 }
 
 .caudex {

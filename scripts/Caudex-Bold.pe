@@ -1,0 +1,13 @@
+#!/usr/bin/env fontforge
+
+if ( $argc == 2 )
+    version = $1
+else
+    version = "2.0"
+endif
+Open("../fonts/src/Caudex-Bold.sfd", 1)
+SetFontNames("", "", "", "", "", version)
+Generate("../fonts/Caudex-Bold.woff2")
+Generate("../fonts/Caudex-Bold.ttf")
+Close()
+Quit()

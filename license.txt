@@ -1,4 +1,4 @@
-Copyright (c) The Caudex Contributors (https://github.com/nidud/caudex),
+Copyright (c) The Caudex Project Authors https://github.com/nidud/caudex,
 with Reserved Font Name Caudex.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
