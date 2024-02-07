@@ -5,5 +5,4 @@
 Links:
 - [codex.htm](https://htmlpreview.github.io/?https://github.com/nidud/caudex/blob/main/samples/codex.htm)
 - [glyphs.htm](https://htmlpreview.github.io/?https://github.com/nidud/caudex/blob/main/samples/glyphs.htm)
-- [kern.htm](https://htmlpreview.github.io/?https://github.com/nidud/caudex/blob/main/samples/kern.htm)
 
