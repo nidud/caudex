@@ -1,0 +1,9 @@
+#!/usr/bin/env fontforge
+
+Select($1)
+Simplify()
+RoundToInt()
+AddExtrema(1)
+RoundToInt()
+AddExtrema()
+RoundToInt()

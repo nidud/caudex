@@ -1,0 +1,90 @@
+#!/usr/bin/env fontforge
+
+if ( $argc == 2 )
+    version = $1
+else
+    version = "2.0"
+endif
+Open("BoldItalic.sfd", 1)
+cnt = CharCnt()
+i = g = 0
+while ( i < cnt )
+  Select(i)
+  u = GlyphInfo("Unicode")
+  if ( u > 0x0020 && u < 0xFEFF )
+    g++
+  endif
+  ++i
+endloop
+glyphs = Array(g)
+i = g = 0
+while ( i < cnt )
+  Select(i)
+  u = GlyphInfo("Unicode")
+  if ( u > 0x0020 && u < 0xFEFF )
+    glyphs[g] = u
+    g++
+  endif
+  ++i
+endloop
+
+Open("Caudex-Bold.sfd", 1)
+SetMacStyle(0x03)
+SetOS2Value("StyleMap", 0x21)
+SetItalicAngle(-13)
+SetFontNames("Caudex-BoldItalic", "", "Caudex BoldItalic", "BoldItalic", "", version)
+SetTTFName(1033, 3, "FontForge : Caudex Bold Italic : 12-5-2011")
+SetTTFName(1033, 2, "BoldItalic")
+SetTTFName(1030, 2, "FedKursiv")
+SetTTFName(1031, 2, "FettKursiv")
+SetTTFName(1044, 2, "HalvfetKursiv")
+SetTTFName(1053, 2, "FetKursiv")
+SetTTFName(1040, 2, "NeroCursivo")
+SetTTFName(1034, 2, "NegritaCursiva")
+SetTTFName(1036, 2, "GrasItalique")
+SetTTFName(1032, 2, "﻿έντονηΛειψίας")
+SetTTFName(1049, 2, "﻿ОбычныйКурсив")
+
+SelectAll()
+Skew(13,0,0)
+SelectGlyphsSplines()
+RoundToInt()
+AddExtrema()
+RoundToInt()
+i = 0
+while ( i < SizeOf(glyphs) )
+    Open($firstfont)
+    Select(UCodePoint(glyphs[i]))
+    Copy()
+    Open($nextfont)
+    Select(UCodePoint(glyphs[i]))
+    Paste()
+    ++i
+endloop
+Validate(1)
+count = CharCnt()
+i = 0
+while ( i < count )
+    Select(i)
+    state = GlyphInfo("ValidationState")
+    if ( state & 0x1 )
+        if ( state & 0x8 )
+            CorrectDirection()
+            RoundToInt()
+        endif
+        if ( state & 0x4 )
+            RemoveOverlap()
+            RoundToInt()
+        endif
+        if ( state & 0x20 )
+            AddExtrema(1)
+            RoundToInt()
+        endif
+    endif
+    ++i
+endloop
+Generate("../Caudex-BoldItalic.ttf" )
+Close()
+Open($firstfont)
+Close()
+Quit()
